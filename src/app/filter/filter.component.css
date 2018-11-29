@@ -1,0 +1,30 @@
+.button{
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    margin: 3px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 4px;
+    
+}
+.container {
+    padding: 8px 5%;
+  }
+div{
+    position: absolute;
+    left: 80%;
+    top: 250px;
+}
+  input {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    box-sizing: border-box;
+    background-color: rgba(81, 81, 81, 0.50);
+    border-radius: 4px;
+    color: #ffffff;
+}
