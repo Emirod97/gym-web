@@ -1,17 +1,28 @@
 <div class="text">
-  <h1>Registro de entradas GYM CETYS</h1>
-  <h3> Total de usuarios activos</h3>
- 
+    <h1>Registro de entradas GYM CETYS</h1>
+    <h3> Total de usuarios activos</h3>
+
 </div>
 <table>
     <tr>
         <th class="tr"># Matrícula</th>
-        <th class="tr">Nombre y apellido del usuario</th>
-        <th class="tr">Fecha y hora de entrada</th>
+        <th class="tr">Nombre y apellido(s)</th>
+        <th class="tr">Fecha</th>
+        <th class="tr">Hora entrada</th>
+        <th class="tr">Hora salida</th>
     </tr>
-   <tr>
-       <th></th>
-       <th></th>
-       <th></th>
-   </tr>
+    <tr *ngFor="let attendance of attendances">
+        <th>{{attendance.member.id }}</th>
+        <th>{{attendance.member.firstName}} {{attendance.member.lastName}}</th>
+        <th>{{attendance.date}}</th>
+        <th>{{attendance.checkIn}}</th>
+        <th>{{attendance.checkOut}}</th>
+    </tr>
 </table>
+
+<div class="container">
+    <input [(ngModel)]="studentNumber" placeholder="Matrícula"><br>
+    <input [(ngModel)]="date" type="date" ><br>
+    <button (click)=filter()>Buscar</button>
+    <button *ngIf="isFilters"  (click)=removeFilters()>Limpiar filtros</button>
+</div>
