@@ -1,15 +1,20 @@
 <div class="card">
   <div class="container">
       <h1>Registrar Usuarios</h1>
-      <label for="name"><b>Nombre</b></label><br>
-      <input id="name" type="text" placeholder="Nombre de usuario" ><br>
-      <label for="lastName"><b>Apellido</b></label><br>
-      <input id="lastname"  type="text" placeholder="Apellido de usuario"
-          name="psw" required><br>
-      <label for="matricula"><b>Matrícula</b></label><br>
-      <input id="matricula" type="text" placeholder="matricula" ><br>
-      <label for="beca"><b>% Beca</b></label><br>
-      <input type="text"placeholder="% beca" id="beca"><br>
-      <button type="submit" onclick="passwordexe();toastMessage();confirmpsw();validateEntry()" class="button">Registrar</button>
+      <label><b>Nombre</b></label><br>
+      <input [(ngModel)]="member.firstName" type="text" placeholder="Nombre de usuario" ><br>
+      <label><b>Apellido</b></label><br>
+      <input [(ngModel)]="member.lastName" type="text" placeholder="Apellido de usuario" required><br>
+      <label><b>Matrícula</b></label><br>
+      <input [(ngModel)]="member.id" type="text" placeholder="matricula" ><br>
+      <label><b>Deporte</b></label><br>
+      <input [(ngModel)]="member.sportScholarship.sportName" type="text"placeholder="Deporte"><br>
+      <label ><b>% Beca</b></label><br>
+      <input [(ngModel)]="member.sportScholarship.percentage" type="text"placeholder="% beca"><br>
+      
+      <button type="submit" (click)="register()" class="button">Registrar</button>
+  </div>
+  <div *ngIf="errorMessage"  class="alert">
+    {{errorMessage}}
   </div>
 </div>

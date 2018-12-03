@@ -8,8 +8,19 @@
     background-color:transparent; 
     position: absolute;
     left: 25%;
-    top: 150px;
+    top: 10%;
 
+  }
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  label{
+    text-align: left !important; 
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -18,6 +29,7 @@
   }
   .container {
     padding: 8px 5%;
+    text-align: center  ;
   }
   .button{
     background-color: #000;
