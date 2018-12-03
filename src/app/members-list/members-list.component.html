@@ -1,0 +1,17 @@
+<div class="text">
+    <h1>Usuarios registrados</h1>
+</div>
+<table>
+    <tr>
+        <th class="tr"># Matrícula</th>
+        <th class="tr">Nombre y apellido(s)</th>
+        <th class="tr">Deporte</th>
+        <th class="tr">Porcentaje de beca</th>
+    </tr>
+    <tr *ngFor="let member of members">
+        <th>{{member.id }}</th>
+        <th>{{member.firstName}} {{member.lastName}}</th>
+        <th>{{(member.sportScholarship !== null) ?(member.sportScholarship.sportName):'NA'}}</th>
+        <th>{{(member.sportScholarship !== null)? (member.sportScholarship.percentage):'NA'}}</th>
+    </tr>
+</table>
