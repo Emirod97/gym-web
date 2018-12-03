@@ -42,7 +42,7 @@
     color: #ffffff;
 }
 div{
-    background: url(bc.png) no-repeat center center fixed;
+    /*background: url(bc.png) no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -moz-background-size:cover;
