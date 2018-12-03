@@ -1,7 +1,9 @@
 <nav>
   <ul>
     <li> <img src="logo.png" alt=""></li>
-      <li><a class="active" href="./user-register/user-register.component.html">Registrar nuevo usuario</a></li>
-      <li><a href="#news">Cerrar sesión</a></li>
-    </ul>
-  </nav>
+    <li><a class="active" [routerLink]="['home']">Dashboard</a></li>
+    <li><a class="active" [routerLink]="['members']">Usuarios</a></li>
+    <li><a class="active" [routerLink]="['register']">Registrar nuevo usuario</a></li>
+    <li><a href="#news">Cerrar sesión</a></li>
+  </ul>
+</nav>
